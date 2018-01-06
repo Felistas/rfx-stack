@@ -20,6 +20,16 @@ export function loader() {
         ],
       },
     },
+    sassLoader: {
+      use: [
+        ExtractTextPlugin.extract([
+          { fallbackLoader: 'style-loader', loader: 'css-loader' },
+        ]),
+        'css-loader',
+        'postcss-loader',
+        'sass-loader',
+      ],
+    },
     cssModules: {
       loader: ExtractTextPlugin.extract({
         fallbackLoader: 'style-loader',

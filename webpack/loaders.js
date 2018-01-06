@@ -1,6 +1,4 @@
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
 const Dir = global.DIR;
-
 
 export default function getLoaders() {
   return {
@@ -40,14 +38,7 @@ export default function getLoaders() {
     },
     sassLoader: {
       test: /\.global\.scss$/,
-      use: [
-        ExtractTextPlugin.extract([
-          { fallbackLoader: 'style-loader', loader: 'css-loader' },
-        ]),
-        'css-loader',
-        'postcss-loader',
-        'sass-loader',
-      ],
+      loader: 'sass-loader',
     },
   };
 }
