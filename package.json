@@ -16,7 +16,7 @@
     "build:server:web": "cross-env NODE_ENV=production webpack",
     "build:server:api": "cross-env NODE_ENV=production webpack",
     "web:dev": "cross-env NODE_ENV=development webpack --watch ./run/start.web.js",
-    "web:prod": "crcoss-env NODE_ENV=production node ./run/build/start.web.bundle.js",
+    "web:prod": "cross-env NODE_ENV=production node ./run/build/start.web.bundle.js",
     "api:dev": "cross-env NODE_ENV=development nodemon ./run/start.api.js",
     "api:prod": "cross-env NODE_ENV=production node ./run/build/start.api.bundle.js",
     "seed:dev": "cross-env NODE_ENV=development node ./run/start.seeder.js",
