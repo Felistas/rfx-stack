@@ -53,6 +53,7 @@ Config = merge(Config, {
       Loader.file,
       Loader.cssGlobal,
       Loader.cssModules,
+      Loader.sassLoader,
     ],
   },
 });
