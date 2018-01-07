@@ -5,7 +5,7 @@ const Dir = global.DIR;
 export default {
   resolve: {
     modules: ['node_modules'],
-    extensions: ['.js', '.jsx', '.json'],
+    extensions: ['.js', '.jsx', '.json', '.scss'],
     alias: {
       react: path.join(Dir.modules, 'react'),
     },

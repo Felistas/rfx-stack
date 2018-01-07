@@ -37,7 +37,7 @@ export default function getLoaders() {
       /* loader: based on target script */
     },
     sassLoader: {
-      test: /\.global\.scss$/,
+      test: /\.scss$/,
       loader: 'sass-loader',
     },
   };
