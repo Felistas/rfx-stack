@@ -5,7 +5,7 @@ import path from 'path';
 
 import vendor from '~/config/vendor';
 
-const Dir = global.DIR;
+const Dir = global.DIR || global.DIR2;
 
 export function loader() {
   return {
@@ -19,16 +19,6 @@ export function loader() {
           'babel-root-import',
         ],
       },
-    },
-    sassLoader: {
-      use: [
-        ExtractTextPlugin.extract([
-          { fallbackLoader: 'style-loader', loader: 'css-loader' },
-        ]),
-        'css-loader',
-        'postcss-loader',
-        'sass-loader',
-      ],
     },
     cssModules: {
       loader: ExtractTextPlugin.extract({

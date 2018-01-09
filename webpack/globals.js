@@ -1,6 +1,6 @@
 import path from 'path';
 
-const Dir = global.DIR;
+const Dir = global.DIR || global.DIR2;
 
 export default {
   resolve: {
