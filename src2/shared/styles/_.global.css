@@ -1,0 +1,50 @@
+@import 'font-awesome';
+@import 'animate.css';
+@import 'normalize.css';
+@import "tachyons";
+@import "./_.custom.css";
+
+:root {
+  --button-color: #1C2541;
+  --button-background-color: #5BC0BE;
+}
+
+
+body {
+  color: #5BC0BE;
+  background-color: #1C2541;
+}
+
+a {
+  color: #5BC0BE;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+a:hover,
+a:focus {
+  border-color: rgba(0,0,0,0) !important;
+  box-shadow: none !important;
+  text-decoration: none;
+  color: #6FFFE9;
+}
+
+a, button {
+  outline: 0;
+}
+
+h1, h3, h4 {
+  color: #FFD98E;
+}
+
+img {
+  max-width: 100%;
+}
+
+input, textarea {
+  font-size: 1rem;
+}
+
+input::-ms-clear, textarea::-ms-clear {
+  display: none;
+}

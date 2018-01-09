@@ -1,0 +1,7 @@
+@import 'TestStyleVariable';
+// @import '~@testScss/TestNodeModulesVariable';
+
+.testStyle {
+  font-size: 42px;
+  color: $brand-primary;
+}
