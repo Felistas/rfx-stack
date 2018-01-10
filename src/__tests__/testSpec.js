@@ -1,12 +1,31 @@
+// Link.react.test.js
 import React from 'react';
-import { shallow, mount } from 'enzyme';
-import Home from '../shared/containers/Home';
-import store from '../shared/stores';
+import { shallow } from 'enzyme';
+import Link from '../Link.react';
 
-const component = mount(<Home store={store} />);
+const component = shallow(
+  <Link page="http://www.facebook.com">Facebook</Link>,
+);
 
-describe('App test', () => {
-  it('should render as expected', () => {
-    expect(component).toMatchSnapshot();
-  });
+const STATUS = {
+  HOVERED: 'hovered',
+  NORMAL: 'normal',
+};
+
+test('Link changes the class when hovered', () => {
+  
+  expect(component).toMatchSnapshot();
+
+  expect(component.instance().state.class).toEqual(STATUS.NORMAL)
+  // manually trigger the callback
+  component.props().onMouseEnter();
+
+  expect(component.instance().state.class).toEqual(STATUS.HOVERED)
+  // re-rendering
+  expect(component.update()).toMatchSnapshot();
+
+  // manually trigger the callback
+  component.props().onMouseLeave();
+  // re-rendering
+  expect(component.update()).toMatchSnapshot();
 });
