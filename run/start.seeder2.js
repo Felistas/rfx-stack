@@ -6,4 +6,4 @@ const env = require('../config/expose');
 
 global.CONFIG = getenv.multi(env).default;
 
-require('../src2/utils/seeder.runner').default('./src2/seeds/');
+require('../src/utils2/seeder.runner').default('./src/seeds2/');

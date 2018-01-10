@@ -1,6 +1,5 @@
 {
   "parser": "babel-eslint",
-  "extends": ["airbnb"],
   "globals": {
     "fetch": true,
     "navigator": true,
@@ -8,13 +7,5 @@
     "window": true
   },
   "rules": {
-    "react/forbid-prop-types": 0,
-    "react/require-default-props": 0,
-    "import/extensions": 0,
-    "import/prefer-default-export": 0,
-    "import/no-unresolved": [2, { "ignore": ["^[~]", "^[@]"] }],
-    "class-methods-use-this": 0,
-    "no-useless-computed-key": 0,
-    "key-spacing": [0, { "align": "value" }]
   }
 }

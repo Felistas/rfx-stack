@@ -18,11 +18,11 @@ if (match.script('web:dev', 'development')) {
   Config = merge(Config, ConfigServerDev.config('start.web'));
 }
 
-if (match.script('web:dev2', 'development')) {
+if (match.script('web:dev:custom', 'development')) {
   Config = require('./webpack/config.server').load();
   const ConfigServerDev = require('./webpack/config.server.dev');
   Loader = merge(Loader, ConfigServerDev.loader());
-  Config = merge(Config, ConfigServerDev.config('start2.web'));
+  Config = merge(Config, ConfigServerDev.config('start.web2'));
 }
 
 if (match.script('build:client:web', 'production')) {
